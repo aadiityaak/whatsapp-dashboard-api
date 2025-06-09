@@ -28,3 +28,9 @@ Route::middleware(['auth:sanctum'])->group(function () {
 });
 
 require __DIR__ . '/api-dash.php';
+
+use App\Http\Controllers\Api\WhatsappSessionController;
+
+Route::get('/sessions', [WhatsappSessionController::class, 'index']);
+Route::post('/sessions', [WhatsappSessionController::class, 'store']);
+Route::put('/sessions/{id}/status', [WhatsappSessionController::class, 'updateStatus']);

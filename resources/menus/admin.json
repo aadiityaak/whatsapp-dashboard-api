@@ -6,6 +6,24 @@
         "route": "/"
     },
     {
+        "key": "session",
+        "label": "Session",
+        "icon": "lucide:log-in",
+        "route": "/session",
+        "items": [
+            {
+                "key": "session",
+                "label": "Login",
+                "route": "/session/[id]"
+            },
+            {
+                "key": "send",
+                "label": "Register",
+                "route": "/session/[id]/send"
+            }
+        ]
+    },
+    {
         "key": "billing",
         "label": "Billing",
         "icon": "lucide:briefcase",
